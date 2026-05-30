@@ -27,21 +27,14 @@ body {
     gap: 15px;
 }
 
-.logo-placeholder {
-    width: 50px;
-    height: 50px;
-    background-color: #ffb300; /* Gold color */
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 10px;
-    color: black;
-    font-weight: bold;
-}
-
 .main-header h1 {
     font-size: 18px;
+}
+
+.site-logo {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
 }
 
 .navigation a {
@@ -49,10 +42,17 @@ body {
     text-decoration: none;
     margin-left: 20px;
     font-size: 14px;
+    transition: color 0.2s ease;
 }
 
 .navigation a:hover {
-    color: #ffb300;
+    color: #ffb300; /* Turns gold on hover */
+}
+
+/* Underline or highlight the active page link */
+.navigation a.active-link {
+    border-bottom: 2px solid #ffb300;
+    font-weight: bold;
 }
 
 /* 2. HERO STYLING */
@@ -105,15 +105,20 @@ body {
     min-width: 280px;
     overflow: hidden;
     box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
 }
 
-.card-image {
-    background-color: #e0e0e0;
+/* Smooth lift animation when hovering over a card */
+.course-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card-photo {
+    width: 100%;
     height: 150px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #757575;
+    object-fit: cover;
 }
 
 .card-info {
@@ -125,7 +130,16 @@ body {
     margin-bottom: 10px;
 }
 
-/* 4. FOOTER STYLING */
+/* 4. ABOUT PAGE TEXT STYLING */
+.about-content {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    line-height: 1.8;
+}
+
+/* 5. FOOTER STYLING */
 .main-footer {
     background-color: #1a237e;
     color: #b0bec5;
@@ -135,45 +149,24 @@ body {
     font-size: 13px;
     line-height: 1.8;
 }
-/* Styling the new logo image */
-.site-logo {
-    width: 50px;
-    height: 50px;
-    object-fit: contain;
-}
 
-/* Styling the course card photos */
-.card-photo {
-    width: 100%;
-    height: 150px;
-    object-fit: cover; /* This crops the image beautifully to fit the box */
-}
-/* Underline or highlight the active page link */
-.navigation a.active-link {
-    border-bottom: 2px solid #ffb300;
-    font-weight: bold;
-}
-/* --- MOBILE RESPONSIVE STYLES --- */
+/* 6. MOBILE RESPONSIVE STYLES */
 @media screen and (max-width: 768px) {
-    
-    /* 1. Stack the header items vertically instead of horizontally */
     .main-header {
         flex-direction: column;
         gap: 15px;
         text-align: center;
     }
 
-    /* 2. Make the search box wider on small mobile screens */
     .hero-banner input {
         width: 90%;
     }
 
-    /* 3. Force the course cards to take up 100% width (1 card per row) */
     .course-grid {
         flex-direction: column;
     }
 
     .course-card {
-        width: 100%; /* Instead of 50%, cards now stack beautifully */
+        width: 100%;
     }
 }

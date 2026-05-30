@@ -4,7 +4,7 @@ const courseCards = document.querySelectorAll('.course-card');
 
 // 2. Listen for typing events inside the search box
 searchInput.addEventListener('input', function() {
-    // Convert text to lowercase so matching isn't ruined by big or small letters
+    // Convert text to lowercase so matching isn't ruined by capitalization differences
     const searchText = searchInput.value.toLowerCase();
 
     // 3. Loop through every single course card
