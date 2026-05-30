@@ -12,8 +12,8 @@ A beginner-friendly visual replica (frontend clone) of the Ministry of Education
 ---
 
 ## 🛠️ Built With
-* **HTML5:** For the core skeleton and document structure (សម្រាប់គ្រោងឆ្អឹងវេបសាយ)
-* **CSS3:** For the colors, typography, spacing, and styling (សម្រាប់លម្អពណ៌ និងអក្សរ)
+* **HTML5:** For the core skeleton and document structure 
+* **CSS3:** For the colors, typography, spacing, and styling 
 
 ---
 
