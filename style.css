@@ -148,3 +148,32 @@ body {
     height: 150px;
     object-fit: cover; /* This crops the image beautifully to fit the box */
 }
+/* Underline or highlight the active page link */
+.navigation a.active-link {
+    border-bottom: 2px solid #ffb300;
+    font-weight: bold;
+}
+/* --- MOBILE RESPONSIVE STYLES --- */
+@media screen and (max-width: 768px) {
+    
+    /* 1. Stack the header items vertically instead of horizontally */
+    .main-header {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    /* 2. Make the search box wider on small mobile screens */
+    .hero-banner input {
+        width: 90%;
+    }
+
+    /* 3. Force the course cards to take up 100% width (1 card per row) */
+    .course-grid {
+        flex-direction: column;
+    }
+
+    .course-card {
+        width: 100%; /* Instead of 50%, cards now stack beautifully */
+    }
+}

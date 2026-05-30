@@ -8,38 +8,46 @@
 </head>
 <body>
 
+    <!-- 1. FIXED HEADER SECTION (Links connected correctly) -->
     <header class="main-header">
         <div class="logo-area">
             <img src="logo.png" alt="MoEYS Logo" class="site-logo">
             <h1>វេទិកាសិក្សាជំនាញវិជ្ជាជីវៈ (PLP)</h1>
         </div>
         <nav class="navigation">
-            <a href="#">ទំព័រដើម</a>
+            <!-- Changed from "#" to actual file names -->
+            <a href="index.html" class="active-link">ទំព័រដើម</a>
             <a href="#">វគ្គសិក្សា</a>
-            <a href="#">អំពីយើង</a>
+            <a href="about.html">អំពីយើង</a>
         </nav>
     </header>
 
+    <!-- 2. HERO SECTION -->
     <section class="hero-banner">
         <h2>អភិវឌ្ឍសមត្ថភាពវិជ្ជាជីវៈគ្រូបង្រៀនឥតឈប់ឈរ</h2>
         <p>ស្វែងរកវគ្គសិក្សា និងឯកសារគរុកោសល្យផ្លូវការនៅទីនេះ</p>
         <input type="text" id="search-box" placeholder="ស្វែងរកវគ្គសិក្សានៅទីនេះ...">
     </section>
 
+    <!-- 3. MAIN CONTENT / COURSE GRID (Placeholders fixed to real image tags) -->
     <main class="content-container">
         <h3 class="section-title">វគ្គសិក្សាពេញនិយម</h3>
         
         <div class="course-grid">
+            <!-- Course Card 1 -->
             <div class="course-card">
-                <div class="card-image">រូបភាពមេរៀន</div>
+                <!-- Changed from <div> block to <img> tag -->
+                <img src="course1.jpg" alt="ភាសាខ្មែរ ថ្នាក់ទី២" class="card-photo">
                 <div class="card-info">
                     <h4>វិធីសាស្ត្របង្រៀនភាសាខ្មែរ ថ្នាក់ទី២</h4>
                     <p>ការបង្រៀនអំណាន និងសំណេរតាមបែបស្ថាបនា។</p>
                 </div>
             </div>
 
+            <!-- Course Card 2 -->
             <div class="course-card">
-                <div class="card-image">រូបភាពមេរៀន</div>
+                <!-- Changed from <div> block to <img> tag -->
+                <img src="course2.jpg" alt="គណិតវិទ្យា ថ្នាក់ទី៣" class="card-photo">
                 <div class="card-info">
                     <h4>វិធីសាស្ត្របង្រៀនគណិតវិទ្យា ថ្នាក់ទី៣</h4>
                     <p>ការយល់ដឹងអំពីលេខ និងវិធីគណនាគ្រឹះ។</p>
@@ -48,10 +56,12 @@
         </div>
     </main>
 
+    <!-- 4. FOOTER SECTION -->
     <footer class="main-footer">
         <p>© 2026 ក្រសួងអប់រំ យុវជន និងកីឡា - Ministry of Education, Youth and Sport</p>
         <p>អាសយដ្ឋាន៖ មហាវិថីព្រះនរោត្តម ភ្នំពេញ កម្ពុជា</p>
     </footer>
-<script src="script.js"></script>
+
+    <script src="script.js"></script>
 </body>
 </html>
